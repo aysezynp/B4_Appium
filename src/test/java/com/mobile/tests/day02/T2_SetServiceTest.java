@@ -1,4 +1,5 @@
-package com.mobile.tests;
+package com.mobile.tests.day02;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -12,6 +13,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
+import java.net.URL;
 
 public class T2_SetServiceTest {
     AppiumDriver<MobileElement> driver;
@@ -39,6 +41,7 @@ public class T2_SetServiceTest {
 
         //driver=new AppiumDriver<MobileElement>(service.getUrl(),capabilities);
         driver=new AndroidDriver<>(service.getUrl(),capabilities);
+        Thread.sleep(5000);
         MobileElement digit2=driver.findElement(By.id("com.google.android.calculator:id/digit_2"));
         MobileElement plusBtn=driver.findElement(By.id("com.google.android.calculator:id/op_add"));
         MobileElement digit3=driver.findElement(By.id("com.google.android.calculator:id/digit_3"));
